@@ -6,12 +6,11 @@ port: 3000
 
 image:
   name: zdgul/myapp
-  tag: rest-api-4.0
+  tag: rest-api-4.3
 
 
 configmap:
   name: rest-api-configmap
   data:
     ENV: 'TEST'
-    PORT: '3000'
     DBURL: 'mongodb+srv://my-rest-api:my-rest-api@my-rest-api.9nx2ruj.mongodb.net/'

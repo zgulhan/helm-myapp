@@ -5,4 +5,4 @@ metadata:
   namespace: {{ .Values.namespace }}
 data:
     ENV: {{ .Values.configmap.data.ENV }}
-    PORT: {{ .Values.configmap.data.PORT }}
+    DBURL: {{ .Values.configmap.data.DBURL }}
