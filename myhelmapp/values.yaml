@@ -8,7 +8,7 @@ configmap:
   name: rest-api-configmap
   data: 
     ENV: 'DEV'
-    PORT: '3000'
+    PORT: 3000
     DBURL: 'mongodb+srv://my-rest-api:my-rest-api@my-rest-api.9nx2ruj.mongodb.net/'
 
 
