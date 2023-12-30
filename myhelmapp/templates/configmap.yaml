@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name:  {{ .Values.configmap.name }}
   namespace: {{ .Values.namespace }}
-data:
-    ENV: {{ .Values.configmap.data.ENV }}
-    PORT: {{ .Values.configmap.data.PORT }}
-    DBSTART: {{ .Values.configmap.data.DBSTART }}
-    DBEND: {{ .Values.configmap.data.DBEND }}
+data: 
+  ENV: {{ .Values.configmap.data.ENV }}
+  PORT: {{ .Values.configmap.data.PORT }}
+  DBSTART: {{ .Values.configmap.data.DBSTART }}
+  
 

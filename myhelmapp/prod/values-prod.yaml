@@ -13,5 +13,5 @@ configmap:
   data:
     ENV: 'PROD'
     PORT: '3000'
-    DBSTART: 'mongodb+srv://my-rest-api:'
     DBEND: '@my-rest-api.9nx2ruj.mongodb.net/'
+    DBSTART: +srv://my-rest-api:'
