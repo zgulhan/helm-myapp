@@ -8,7 +8,10 @@ configmap:
   name: rest-api-configmap
   data:
     ENV: 'DEV'
+    PORT: '3000'
+    DBSTART: 'mongodb+srv://my-rest-api:'
+    DBEND: '@my-rest-api.9nx2ruj.mongodb.net/'
 
 image:
   name: zdgul/myapp
-  tag: rest-api-3.0
+  tag: rest-api-4.0
