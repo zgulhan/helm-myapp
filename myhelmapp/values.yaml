@@ -9,10 +9,9 @@ configmap:
   data: 
     ENV: 'DEV'
     PORT: '3000'
-    DBEND: '@my-rest-api.9nx2ruj.mongodb.net/'
-    DBSTART: +srv://my-rest-api:'
+    DBURL: 'mongodb+srv://my-rest-api:my-rest-api@my-rest-api.9nx2ruj.mongodb.net/'
 
 
 image:
   name: zdgul/myapp
-  tag: rest-api-4.1
+  tag: rest-api-4.2

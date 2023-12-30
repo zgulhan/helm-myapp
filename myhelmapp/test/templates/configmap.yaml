@@ -6,5 +6,3 @@ metadata:
 data:
     ENV: {{ .Values.configmap.data.ENV }}
     PORT: {{ .Values.configmap.data.PORT }}
-    DBSTART: {{ .Values.configmap.data.DBSTART }}
-    DBEND: {{ .Values.configmap.data.DBEND }}
