@@ -13,4 +13,4 @@ spec:
   selector:
     app: {{ .Values.appName }}
     tier: api
-  type: LoadBalancer
+  type: ClusterIP
