@@ -1,0 +1,14 @@
+appName: rest-api
+
+port: 3000
+
+namespace: default
+
+configmap:
+  name: rest-api-configmap
+  data:
+    ENV: 'DEV'
+
+image:
+  name: zdgul/myapp
+  tag: rest-api-3.0
