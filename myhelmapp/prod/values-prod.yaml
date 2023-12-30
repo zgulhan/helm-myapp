@@ -1,0 +1,14 @@
+namespace: prod
+
+appName: rest-api
+
+port: 3000
+
+image:
+  name: zdgul/myapp
+  tag: rest-api-3.0
+
+configmap:
+  name: rest-api-configmap
+  data:
+    ENV: 'PROD'

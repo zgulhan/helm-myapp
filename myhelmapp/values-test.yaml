@@ -1,6 +1,0 @@
-namespace: test
-
-configmap:
-  name: rest-api-configmap
-  data:
-    ENV: 'TEST'

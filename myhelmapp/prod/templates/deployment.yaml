@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.appName }}
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+      tier: api
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+        tier: api
+    spec: 
+      containers:
+      - name: my-rest-api
+        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+              name: {{ .Values.configmap.name }}
+      imagePullSecrets:
+      - name: regcred
+

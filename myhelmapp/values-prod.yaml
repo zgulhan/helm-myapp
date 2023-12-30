@@ -1,6 +1,0 @@
-namespace: prod
-
-configmap:
-  name: rest-api-configmap
-  data:
-    ENV: 'PROD'
