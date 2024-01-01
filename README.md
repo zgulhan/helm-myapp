@@ -2,7 +2,7 @@ It's a CI/CD pipeline for dev, test, and prod environments built with GitLab, He
 
 # CI Pipeline
 
-For the CI part please clone this [repository](https://gitlab.com/zdgul/express-api) to your local host. 
+For the CI part please clone this [project](https://github.com/zgulhan/rest-api) to your GitLab repository. 
 
 In GitLab, after adding $REGISTRY_PASS which is your Docker Hub's password as a variable from Settings -> CI/CD -> Variables, automatic image building will be triggered.
 
