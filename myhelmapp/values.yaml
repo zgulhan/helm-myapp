@@ -13,4 +13,4 @@ configmap:
 
 image:
   name: zdgul/myapp
-  tag: rest-api-4.4
+  tag: rest-api-4.5
