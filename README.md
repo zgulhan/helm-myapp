@@ -6,7 +6,7 @@ For the CI part please clone this [repository](https://gitlab.com/zdgul/express-
 
 In GitLab, after adding $REGISTRY_PASS which is your Docker Hub's password as a variable from Settings -> CI/CD -> Variables, automatic image building will be triggered.
 
-![masked variable](1.png)
+![masked variable](/pictures/1.png)
 
 # CD Pipeline
 
@@ -18,6 +18,8 @@ You need to set your credentials as a Kubernetes Secret to pull an image from pr
 kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1 --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
 
 ```
+
+> For more information about pulling an image from private registry, please visit the [link](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-in-the-cluster-that-holds-your-authorization-token).
 
 ## Helm Chart Logic
 
@@ -48,7 +50,7 @@ kubectl port-forward svc/rest-api -n default 3000:3000
 > Please change --repo with your own repository.
 
 After commands above, in [localhost:3000](localhost:3000), you will see this:
-![dev environment](2.png)
+![dev environment](/pictures/2.png)
 
 # Test Environment Setting
 ```
@@ -62,7 +64,7 @@ kubectl port-forward svc/rest-api -n test 3000:3000
 > Please change --repo with your own repository.
 
 After commands above, in [localhost:3000](localhost:3000), you will see this:
-![test environment](3.png)
+![test environment](/pictures/3.png)
 
 # Prod Environment Setting
 ```
@@ -77,21 +79,26 @@ kubectl port-forward svc/rest-api -n prod 3000:3000
 > Please change --repo with your own repository.
 
 After commands above, in [localhost:3000](localhost:3000), you will see this:
-![prod environment](4.png)
+![prod environment](/pictures/4.png)
 
 # DB Change
 
 In [localhost:3000/products](localhost:3000/products), you can access the API:
 
-![products](5.png)
+![products](/pictures/5.png)
 
 If you want to change your DB without rebuilding app image, please change **configmap.data.DBURL** in **values.yaml** file.
 
 
 # Conclusion
 
-![argocd](6.png)
+![argocd](/pictures/6.png)
 
 You can check three deployments in ArgoCD UI like above. Sync policy is designed as manual to provide more control over the project. After any change in the helm repository, deployments are required to be synced in CLI or UI.
 
 This is the end of the project. Thank you for your interest.
+
+# Helpful Resources
+- [Minikube Instructions](https://minikube.sigs.k8s.io/docs/start/)
+- [Pulling an Image from Private Registry](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-in-the-cluster-that-holds-your-authorization-token)
+- [ArgoCD Instructions](https://faun.pub/argo-cd-helm-the-gitops-way-of-deploying-applications-af158420bde5)
