@@ -17,7 +17,7 @@ Also, please change variables: IMAGE_NAME, IMAGE_TAG, and REGISTRY_USER in .gitl
 You need to set your credentials as a Kubernetes Secret to pull an image from private registry:
 
 ```
-kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1 --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
 
 ```
 
