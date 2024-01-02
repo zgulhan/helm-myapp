@@ -6,6 +6,8 @@ For the CI part please clone this [project](https://github.com/zgulhan/rest-api)
 
 In GitLab, after adding $REGISTRY_PASS which is your Docker Hub's password as a variable from Settings -> CI/CD -> Variables, automatic image building will be triggered.
 
+Also, please change variables: IMAGE_NAME, IMAGE_TAG, and REGISTRY_USER in .gitlab-ci.yml to trigger image building successfully.
+
 ![masked variable](/pictures/1.png)
 
 # CD Pipeline
